@@ -1,5 +1,12 @@
-import user from './user.json'
+
+import user from '../data/user.json';
+import data from "../data/data.json";
+import friends from "../data/friends.json";
 import UserProfile from './UserProfile';
+import Statistics from './Statistics';
+import Friends from './Friends';
+
+
 
 export const App = () => {
   return (
@@ -9,6 +16,7 @@ export const App = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        flexDirection: 'column',
         fontSize: 40,
         color: '#010101'
       }}
@@ -19,6 +27,10 @@ export const App = () => {
         location={user.location}
         avatar={user.avatar}
         stats={user.stats}/>
+
+      <Statistics title="Upload stats" stats={data} />
+
+      <Friends friends={friends} />
     </div>
   );
 };

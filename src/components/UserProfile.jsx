@@ -1,5 +1,5 @@
 // import clsx from "clsx";
-import css from "./UserProfile.module.css"
+import css from "../css modules/UserProfile.module.css"
 
 
 const UserProfile = ({username, tag, location, avatar, stats}) => {
